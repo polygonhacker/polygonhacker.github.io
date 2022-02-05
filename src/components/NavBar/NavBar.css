@@ -24,7 +24,6 @@ header {
           align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  padding: 0.5rem;
 }
 
 header div {
@@ -78,7 +77,6 @@ a:hover {
 
 a::after {
   content: attr(data-text);
-  content: attr(data-text)/"";
   height: 0;
   visibility: hidden;
   overflow: hidden;
@@ -91,12 +89,44 @@ a::after {
 }
 
 button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  border-radius: 2rem;
+  background-color: white;
+  border-color: black;
 }
 
 button:hover {
+  background-color: #dedede;
+  border-color: black;
   cursor: pointer;
+  font-weight: 800;
+}
+
+button::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  font-weight: 800;
 }
 /*# sourceMappingURL=NavBar.css.map */

@@ -19,7 +19,7 @@ const NavBar = () => {
                         <a href='#' data-text='Contact'>Contact</a>
                     </li>
                 </ul>
-                <button>Resume</button>
+                <button data-text='Resume'>Resume</button>
             </div>   
         </header>
     )

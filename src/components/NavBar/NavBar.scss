@@ -16,7 +16,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
     position: sticky;
-    padding: 0.5rem;
 }
 
 header div {
@@ -51,7 +50,6 @@ a {
 
 a::after {
     content: attr(data-text);
-    content: attr(data-text) / "";
     height: 0;
     visibility: hidden;
     overflow: hidden;
@@ -61,11 +59,31 @@ a::after {
 }
 
 button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     margin: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    border-radius: 2rem;
+    background-color: white;
+    border-color: black;
     &:hover {
-
+        background-color: rgb(222, 222, 222);
+        border-color: black;
         cursor: pointer;
+        font-weight: 800;
     }
 }
+
+button::after {
+    content: attr(data-text);
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-weight: 800;
+}
+
