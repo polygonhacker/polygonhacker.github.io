@@ -1,0 +1,52 @@
+section {
+    margin-top: 6rem;
+    // max-width: 1980px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2rem 0 0 5%;
+    text-align: left;
+    overflow: hidden;
+    border-right: .15em solid rgb(67, 67, 67);
+    white-space: nowrap;
+    // letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(60, end),
+        blink-caret .5s step-end infinite;
+    width: min-content;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(67, 67, 67) }
+  }
+
+.anagramDiv {
+    display: flex;
+    justify-content: center;
+    // margin: 4rem 0 0 3%;
+
+}
+
+.char {
+    font-size: 3rem;
+    margin: 1rem
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 50%;
+    right: 0%;
+    top: 15%;
+    transform: translate(120px);
+}

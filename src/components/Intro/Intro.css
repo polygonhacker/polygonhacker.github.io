@@ -1,0 +1,84 @@
+section {
+  margin-top: 6rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 2rem 0 0 5%;
+  text-align: left;
+  overflow: hidden;
+  border-right: 0.15em solid #434343;
+  white-space: nowrap;
+  -webkit-animation: typing 3.5s steps(60, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(60, end), blink-caret 0.5s step-end infinite;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #434343;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #434343;
+  }
+}
+
+.anagramDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.char {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+img {
+  width: 50%;
+  right: 0%;
+  top: 15%;
+  -webkit-transform: translate(120px);
+          transform: translate(120px);
+}
+/*# sourceMappingURL=Intro.css.map */
