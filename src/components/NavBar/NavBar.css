@@ -7,10 +7,10 @@
   font-size: 18px;
 }
 
-header {
+.NavBar {
   margin-left: auto;
   margin-right: auto;
-  background: grey;
+  background: #717171;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,8 +22,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  top: 0%;
 }
 
 header div {

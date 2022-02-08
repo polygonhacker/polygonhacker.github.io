@@ -2,7 +2,7 @@ import './NavBar.css';
 
 export const NavBar: React.FC = () => {
     return (
-        <header> 
+        <header className='NavBar'> 
             <div>Yong Cheol Park</div>
             <div>
                 <ul>
