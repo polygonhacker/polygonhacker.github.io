@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 2px rgba(75, 75, 75, 0.5);
+    margin: 1rem;
+    background-color: beige;
+    transform-style: preserve-3d;
+    height: 300px;
+    width: 200px;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+    transition: 200ms;
+    cursor: pointer;
+}
+  
+  
+.card.turned {
+    --rotate-y: 180deg;
+}
+  
+.card .front, .card .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+  
+.card .back {
+    transform: rotateY(180deg);
+}

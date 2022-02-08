@@ -1,0 +1,16 @@
+.Projects {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2{
+        font-size: 2rem;
+        padding: 4rem;
+    }
+
+    .cardDiv {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

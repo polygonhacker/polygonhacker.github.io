@@ -1,0 +1,22 @@
+.Projects {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Projects h2 {
+  font-size: 2rem;
+  padding: 4rem;
+}
+
+.Projects .cardDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=Projects.css.map */
