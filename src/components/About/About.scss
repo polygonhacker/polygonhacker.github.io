@@ -1,0 +1,22 @@
+.About {
+    // max-width: 1980px;
+    background-color: rgb(199, 199, 199);
+
+    h2 {
+        padding: 4rem;
+        font-size: 2rem;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+        padding: 0 0 4rem 0;
+    }
+}
