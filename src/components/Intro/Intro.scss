@@ -1,52 +1,45 @@
-section {
-    margin-top: 6rem;
+.Intro {
     // max-width: 1980px;
-}
+    // width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    background-image: url(face2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
-h1 {
-    font-size: 4rem;
-    margin: 2rem 0 0 5%;
-    text-align: left;
-    overflow: hidden;
-    border-right: .15em solid rgb(67, 67, 67);
-    white-space: nowrap;
-    // letter-spacing: .15em;
-    animation: 
-        typing 3.5s steps(60, end),
-        blink-caret .5s step-end infinite;
-    width: min-content;
-}
+    h1 {
+        font-size: 4rem;
+        margin: 2rem 0 0 0;
+        text-align: left;
+    }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+    .anagramDiv {
+        display: flex;
+        justify-content: center;
+        margin: 4rem;
+        &:hover {
+            cursor: pointer;
+        }
+    
+    }
+    
+    .char {
+        font-size: 3rem;
+        margin: 0.1rem;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 4rem;
+    }
+    
+    .anagramDiv > div {
+        font-size: 5rem;
+        font-weight: 600;
+    }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(67, 67, 67) }
-  }
 
-.anagramDiv {
-    display: flex;
-    justify-content: center;
-    // margin: 4rem 0 0 3%;
-
-}
-
-.char {
-    font-size: 3rem;
-    margin: 1rem
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-}
-
-img {
-    width: 50%;
-    right: 0%;
-    top: 15%;
-    transform: translate(120px);
 }

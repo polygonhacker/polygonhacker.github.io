@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import './Intro.css'
 import face from './face.png';
+import { Item } from '../../types'
 
 gsap.registerPlugin(Flip);
 
@@ -12,7 +13,7 @@ const newPositions = [11, 1, 9, 0, 3, 8, 2, 4, 10, 6, 12, 5, 14, 7, 13];
 const originalPosition = [3, 1, 6, 4, 7, 11, 9, 13, 5, 2, 8, 0, 10, 14, 12];
 let anagramOn = false;
 
-type Item = {id: number, letter: string};
+// type Item = {id: number, letter: string};
 
 const createItemList = (letters: string) => {
     let itemList = []
@@ -61,22 +62,21 @@ const Intro = () => {
 
 
     return (
-        <section>
+        <section className='Intro'>
             <div>
-                
                 <div className='container'>
                     <div>
                         <h1>Hi there!</h1>
                         <h1>Nice to meet you.</h1>
                         <h1>My name is</h1>
                     </div>
-                    <div>
-                        <img src={face} /> 
-                    </div>
+                    
                 </div>
                 <div ref={el} onClick={rearrange} className='anagramDiv'>
                     { layout.items.map(item => (
-                        <div id={`letter-${item.id}`} key={item.id} className='char'>{item.letter}</div>
+                        <div id={`letter-${item.id}`} key={item.id} className='char'>
+                            {item.letter}
+                        </div>
                     ))}
                 </div>
             </div>

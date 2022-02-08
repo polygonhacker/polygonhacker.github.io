@@ -1,84 +1,49 @@
-section {
-  margin-top: 6rem;
+.Intro {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  background-image: url(face2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-h1 {
+.Intro h1 {
   font-size: 4rem;
-  margin: 2rem 0 0 5%;
+  margin: 2rem 0 0 0;
   text-align: left;
-  overflow: hidden;
-  border-right: 0.15em solid #434343;
-  white-space: nowrap;
-  -webkit-animation: typing 3.5s steps(60, end), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(60, end), blink-caret 0.5s step-end infinite;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
 }
 
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #434343;
-  }
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #434343;
-  }
-}
-
-.anagramDiv {
+.Intro .anagramDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 4rem;
 }
 
-.char {
+.Intro .anagramDiv:hover {
+  cursor: pointer;
+}
+
+.Intro .char {
   font-size: 3rem;
-  margin: 1rem;
+  margin: 0.1rem;
 }
 
-.container {
+.Intro .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 4rem;
 }
 
-img {
-  width: 50%;
-  right: 0%;
-  top: 15%;
-  -webkit-transform: translate(120px);
-          transform: translate(120px);
+.Intro .anagramDiv > div {
+  font-size: 5rem;
+  font-weight: 600;
 }
 /*# sourceMappingURL=Intro.css.map */
