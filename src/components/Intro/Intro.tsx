@@ -1,11 +1,12 @@
-import { useState, useRef, useLayoutEffect } from 'react';
+import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
-import { Flip } from 'gsap/Flip';
+import { Flip, TextPlugin } from 'gsap/all';
 import './Intro.css'
 import face from './face.png';
 import { Item } from '../../types'
 
 gsap.registerPlugin(Flip);
+gsap.registerPlugin(TextPlugin);
 
 
 const name = 'YONG CHEOL PARK';
@@ -26,8 +27,67 @@ const createItemList = (letters: string) => {
 
 const Intro = () => {
 
-    const el = useRef<HTMLDivElement>(null);
-    const q = gsap.utils.selector(el);
+    // header animation
+    const headerElement = useRef<HTMLDivElement>(null);
+    const p = gsap.utils.selector(headerElement);
+    const timeLine = useRef<any | null>(null);
+
+    useEffect(() => {
+        timeLine.current = gsap.timeline()
+                .to(
+                    p(".text1"), {
+                        text: {value: "Hi there!<br />"},
+                        duration: 1,
+                        ease: 'none',
+                        delay: 1
+                    }
+                )
+
+                .to(
+                    p(".text2"), {
+                        text: {value: "Nice to meet you.<br />"},
+                        duration: 2,
+                        ease: 'none',
+                        delay: 0.5
+                    }
+                )
+
+                .to(
+                    p(".text3"), {
+                        text: {value: "My name is"},
+                        duration: 1.5,
+                        ease: 'none',
+                        delay: 0.5
+                    }
+                )
+
+                .from(
+                    p(".anagramDiv"), {
+                        opacity: 0,
+                        scale: 0,
+                        ease: 'power1',
+                        duration: 1
+                    }
+                )
+
+        const cursor = gsap.fromTo(
+            p('.cursor'),
+            {autoAlpha: 0},
+            {autoAlpha: 1, duration: 0.5, repeat: -1}
+        )
+
+        gsap.to(
+            p(".cursor"), {
+                text: {value: ""},
+                delay: 9
+            }
+        )
+
+    }, [])
+
+    // anagram
+    const anagramElement = useRef<HTMLDivElement>(null);
+    const q = gsap.utils.selector(anagramElement);
     const initialLayout: {state: undefined | any, items: Item[]} = {
         state: undefined,
         items: createItemList(name)
@@ -63,18 +123,19 @@ const Intro = () => {
 
     return (
         <section className='Intro'>
-            <div>
+            <div ref={headerElement}>
                 <div className='container'>
-                    <div>
-                        <h1>Hi there!</h1>
-                        <h1>Nice to meet you.</h1>
-                        <h1>My name is</h1>
+                    <div className='texts'>
+                        <span className='text1'></span>
+                        <span className='text2'></span>
+                        <span className='text3'></span>
+                        <span className='cursor'>|</span>
                     </div>
-                    
                 </div>
-                <div ref={el} onClick={rearrange} className='anagramDiv'>
+                <div ref={anagramElement} onClick={rearrange} className='anagramDiv'>
                     { layout.items.map(item => (
-                        <div id={`letter-${item.id}`} key={item.id} className='char'>
+                        <div id={`letter-${item.id}`} key={item.id} 
+                        className={`char ${item.letter == ' ' ? 'space' : ''}`}>
                             {item.letter}
                         </div>
                     ))}

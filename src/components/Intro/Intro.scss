@@ -3,7 +3,8 @@
     // width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
+    margin-top: 6rem;
+    padding-bottom: 3rem;
     background-image: url(face2.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -13,12 +14,16 @@
         font-size: 4rem;
         margin: 2rem 0 0 0;
         text-align: left;
+        width: fit-content;
+        border-right: 12px solid rgba(36, 36, 36, 0.75);
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .anagramDiv {
         display: flex;
         justify-content: center;
-        margin: 4rem;
+        margin-bottom: 4rem;
         &:hover {
             cursor: pointer;
         }
@@ -29,11 +34,26 @@
         font-size: 3rem;
         margin: 0.1rem;
     }
+
+    .space {
+        padding: 1rem;
+    }
     
     .container {
         display: flex;
         justify-content: space-around;
         padding-top: 4rem;
+
+        span {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+    
+    }
+
+    .texts {
+        height: 360px;
+        width: 760px;
     }
     
     .anagramDiv > div {
@@ -41,5 +61,8 @@
         font-weight: 600;
     }
 
-
+    .cursor {
+        color: grey;
+    }
+    
 }
