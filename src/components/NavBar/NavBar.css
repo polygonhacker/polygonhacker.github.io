@@ -8,8 +8,6 @@
 }
 
 .NavBar {
-  margin-left: auto;
-  margin-right: auto;
   background: #717171;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,33 +25,34 @@
   top: 0%;
 }
 
-header div {
-  margin: 0 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.NavBar .name {
+  margin-left: 4rem;
 }
 
-ul {
+.NavBar .menu-list {
+  margin-right: 3rem;
+}
+
+.NavBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-li {
+.NavBar li {
   list-style: none;
   margin: 1rem;
 }
 
-a {
+.NavBar a {
   color: black;
   text-decoration: none;
   display: -webkit-inline-box;
@@ -72,11 +71,11 @@ a {
   font-size: 1.1rem;
 }
 
-a:hover {
+.NavBar a:hover {
   font-weight: 800;
 }
 
-a::after {
+.NavBar a::after {
   content: attr(data-text);
   height: 0;
   visibility: hidden;
@@ -89,7 +88,7 @@ a::after {
   font-weight: 800;
 }
 
-button {
+.NavBar button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -103,7 +102,6 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 2rem;
@@ -111,14 +109,14 @@ button {
   border-color: black;
 }
 
-button:hover {
+.NavBar button:hover {
   background-color: #dedede;
   border-color: black;
   cursor: pointer;
   font-weight: 800;
 }
 
-button::after {
+.NavBar button::after {
   content: attr(data-text);
   height: 0;
   visibility: hidden;

@@ -8,8 +8,6 @@
 
 .NavBar {
     // max-width: 1980px;
-    margin-left: auto;
-    margin-right: auto;
     background: rgb(113, 113, 113);
     display: flex;
     justify-content: space-between;
@@ -18,74 +16,85 @@
     position: fixed;
     width: 100%;
     top: 0%;
-}
 
-header div {
-    margin: 0 4rem;
-    display: flex;
-    align-items: center;
-}
+    // header div {
+    //     margin: 0 4rem;
+    //     display: flex;
+    //     align-items: center;
+    // }
 
-ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    .name {
+        margin-left: 4rem;
+    }
 
-li {
-    list-style: none;
-    margin: 1rem;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.1rem;
-    &:hover {
+    .menu-list {
+        margin-right: 3rem;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    li {
+        list-style: none;
+        margin: 1rem;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.1rem;
+        &:hover {
+            font-weight: 800;
+        }
+    }
+    
+    a::after {
+        content: attr(data-text);
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
         font-weight: 800;
     }
-}
-
-a::after {
-    content: attr(data-text);
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    user-select: none;
-    pointer-events: none;
-    font-weight: 800;
-}
-
-button {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 2rem;
-    background-color: white;
-    border-color: black;
-    &:hover {
-        background-color: rgb(222, 222, 222);
+    
+    button {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 2rem;
+        background-color: white;
         border-color: black;
-        cursor: pointer;
+        &:hover {
+            background-color: rgb(222, 222, 222);
+            border-color: black;
+            cursor: pointer;
+            font-weight: 800;
+        }
+    }
+    
+    button::after {
+        content: attr(data-text);
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
         font-weight: 800;
     }
+
 }
 
-button::after {
-    content: attr(data-text);
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    user-select: none;
-    pointer-events: none;
-    font-weight: 800;
-}
+
 

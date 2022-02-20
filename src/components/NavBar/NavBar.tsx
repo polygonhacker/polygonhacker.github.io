@@ -3,8 +3,8 @@ import './NavBar.css';
 export const NavBar: React.FC = () => {
     return (
         <header className='NavBar'> 
-            <div>Yong Cheol Park</div>
-            <div>
+            <div className='name'>Yong Cheol Park</div>
+            <div className='menu-list'>
                 <ul>
                     <li>
                         <a href='#' data-text='About'>About</a>
@@ -18,8 +18,10 @@ export const NavBar: React.FC = () => {
                     <li>
                         <a href='#' data-text='Contact'>Contact</a>
                     </li>
+                    <li>
+                        <button data-text='Resume'>Resume</button>
+                    </li>
                 </ul>
-                <button data-text='Resume'>Resume</button>
             </div>   
         </header>
     )

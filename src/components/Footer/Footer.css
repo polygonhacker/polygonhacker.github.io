@@ -1,0 +1,18 @@
+.footer {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 12rem;
+  background-color: #575757;
+}
+
+.footer div {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=Footer.css.map */
