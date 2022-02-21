@@ -21,15 +21,43 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
 
     min-height: 12rem;
     background-color: rgb(87, 87, 87);
 
-    div {
-        margin-left: auto;
-        margin-right: auto;
+    width: 100%;
+
+    > div {
+        margin: 2rem 0 0 4rem;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .left {
+        // margin: 2rem 0 0 4rem;
+        
+
+        h3 {
+            margin: 1rem 0 0 0;
+        }
+    }
+
+    .right {
+        // margin: 2rem 0 0 4rem;
+        .social-media {
+            margin: 1rem 0 0 0;
+            height: 100px;
+            
+            a {
+                padding: 0 1rem 0 0;
+                text-decoration: none;
+                color: black;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
 
 }

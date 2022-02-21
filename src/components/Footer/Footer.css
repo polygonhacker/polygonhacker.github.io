@@ -4,15 +4,33 @@
   gap: 1rem;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 12rem;
   background-color: #575757;
+  width: 100%;
 }
 
-.footer div {
-  margin-left: auto;
-  margin-right: auto;
+.footer > div {
+  margin: 2rem 0 0 4rem;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+}
+
+.footer .left h3 {
+  margin: 1rem 0 0 0;
+}
+
+.footer .right .social-media {
+  margin: 1rem 0 0 0;
+  height: 100px;
+}
+
+.footer .right .social-media a {
+  padding: 0 1rem 0 0;
+  text-decoration: none;
+  color: black;
+  width: 5rem;
+  height: 5rem;
 }
 /*# sourceMappingURL=Footer.css.map */
