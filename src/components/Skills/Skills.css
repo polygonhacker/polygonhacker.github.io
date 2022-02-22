@@ -1,0 +1,30 @@
+.skills {
+  background-color: #c7c7c7;
+  padding-bottom: 6rem;
+}
+
+.skills .container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills .container h2 {
+  padding: 4rem;
+  font-size: 2rem;
+}
+
+.skills .container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills .container .icons > * {
+  margin: 1rem;
+}
+/*# sourceMappingURL=Skills.css.map */
