@@ -22,10 +22,6 @@ const Footer: React.FC = () => {
                     <a href='#'><BsInstagram size={40} /></a>
                     <a href='#'><BsLinkedin size={40} /></a>
                 </div>
-                
-                
-
-
             </div>
         </footer>
     )

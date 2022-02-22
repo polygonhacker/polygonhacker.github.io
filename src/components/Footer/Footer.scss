@@ -37,18 +37,25 @@
 
     .left {
         // margin: 2rem 0 0 4rem;
-        
-
+        position: relative;
         h3 {
             margin: 1rem 0 0 0;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 3rem;
         }
     }
 
     .right {
         // margin: 2rem 0 0 4rem;
+        position: relative;
         .social-media {
-            margin: 1rem 0 0 0;
-            height: 100px;
+            // margin: 1rem 0 0 0;
+            // height: 100px;
+            position:absolute;
+            bottom: 3rem;
             
             a {
                 padding: 0 1rem 0 0;

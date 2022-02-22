@@ -17,13 +17,26 @@
   font-size: 1.5rem;
 }
 
+.footer .left {
+  position: relative;
+}
+
 .footer .left h3 {
   margin: 1rem 0 0 0;
 }
 
+.footer .left .copyright {
+  position: absolute;
+  bottom: 3rem;
+}
+
+.footer .right {
+  position: relative;
+}
+
 .footer .right .social-media {
-  margin: 1rem 0 0 0;
-  height: 100px;
+  position: absolute;
+  bottom: 3rem;
 }
 
 .footer .right .social-media a {
