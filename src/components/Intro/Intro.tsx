@@ -1,12 +1,13 @@
 import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
-import { Flip, TextPlugin } from 'gsap/all';
+import { Flip, TextPlugin, ScrollTrigger } from 'gsap/all';
 import './Intro.css'
 import face from './face.png';
 import { Item } from '../../types'
 
 gsap.registerPlugin(Flip);
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 
 const name = 'YONG CHEOL PARK';
@@ -37,7 +38,7 @@ const Intro = () => {
                 .to(
                     p(".text1"), {
                         text: {value: "Hi there!<br />"},
-                        duration: 1,
+                        duration: 0.75,
                         ease: 'none',
                         delay: 1
                     }
@@ -46,7 +47,7 @@ const Intro = () => {
                 .to(
                     p(".text2"), {
                         text: {value: "Nice to meet you.<br />"},
-                        duration: 2,
+                        duration: 1.5,
                         ease: 'none',
                         delay: 0.5
                     }
@@ -55,7 +56,7 @@ const Intro = () => {
                 .to(
                     p(".text3"), {
                         text: {value: "My name is"},
-                        duration: 1.5,
+                        duration: 0.75,
                         ease: 'none',
                         delay: 0.5
                     }
@@ -66,7 +67,7 @@ const Intro = () => {
                         opacity: 0,
                         scale: 0,
                         ease: 'power1',
-                        duration: 1
+                        duration: 0.5
                     }
                 )
 
@@ -82,6 +83,13 @@ const Intro = () => {
                 delay: 9
             }
         )
+
+        ScrollTrigger.create({
+            start: 'top',
+            onEnter: rearrange,
+            toggleActions: 'complete none none none',
+            once: true,
+        })
 
     }, [])
 
@@ -113,7 +121,7 @@ const Intro = () => {
                 newItems.push(layout.items[originalPosition[i]]);
             }
         }
-        anagramOn = ! anagramOn;
+        anagramOn = !anagramOn;
         setLayout({
             state: Flip.getState(q("div.char")),
             items: newItems
