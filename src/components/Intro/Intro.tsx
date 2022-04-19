@@ -91,7 +91,7 @@ const Intro = () => {
             // )
         }
 
-        setTimeout(() => {rearrange()}, 6500)
+        setTimeout(() => {rearrange()}, 7000)
 
         setTimeout(() => {
             // gsap.to(
@@ -102,14 +102,27 @@ const Intro = () => {
             //     }
             // )
             removeCursor();
-            removeTexts();
             // Flip.fit(".anagramDiv", ".texts", {
             //     duration: 1,
             // })
 
+            const t1 = gsap.timeline();
+            const anagram = document.querySelector('.anagramDiv');
+
+            t1.set('span', {perspective: 400}) ;
+            if (anagram) {
+                t1.to(anagram.getElementsByTagName('div'), {
+                    duration: 3,
+                    opacity: 0,
+                    x: gsap.utils.random(-1200, 1200, true),
+                    y: gsap.utils.random(-1200, 1200, true),
+                    z: gsap.utils.random(-1200, 1200, true),
+                })
+            }
+            removeTexts();
 
 
-        }, 9000)
+        }, 10000)
         
 
     }, [])
