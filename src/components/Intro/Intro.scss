@@ -29,7 +29,10 @@
         &:hover {
             cursor: pointer;
         }
-    
+        @media only screen and (max-width : 993px) {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
     }
     
     .char {
@@ -43,24 +46,36 @@
     
     .container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         padding-top: 4rem;
 
-        span {
-            font-size: 5rem;
-            font-weight: bold;
-        }
+        .texts {
+            height: 360px;
+            width: 760px;
     
+            @media only screen and (max-width : 993px) {
+                width: 75vw;
+                // height: 480px;
+                height: 100%;
+            }
+
+            span {
+                font-size: 5rem;
+                font-weight: bold;
+
+                @media only screen and (max-width : 1224px) {
+                    font-size: calc(min(10vw, 5rem));
+                }
+            }   
+        }
     }
 
-    .texts {
-        height: 360px;
-        width: 760px;
-    }
-    
     .anagramDiv > div {
         font-size: 5rem;
-        font-weight: 600;
+        font-weight: bold;
+        @media only screen and (max-width : 993px) {
+            font-size: 8vw;
+        }
     }
 
     .cursor {

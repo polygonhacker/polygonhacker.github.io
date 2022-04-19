@@ -15,6 +15,8 @@ const newPositions = [11, 1, 9, 0, 3, 8, 2, 4, 10, 6, 12, 5, 14, 7, 13];
 const originalPosition = [3, 1, 6, 4, 7, 11, 9, 13, 5, 2, 8, 0, 10, 14, 12];
 let anagramOn = false;
 
+const mql = window.matchMedia('(min-width: 1000px');
+
 // type Item = {id: number, letter: string};
 
 const createItemList = (letters: string) => {
@@ -29,73 +31,110 @@ const createItemList = (letters: string) => {
 const Intro = () => {
 
     // header animation
-    const headerElement = useRef<HTMLDivElement>(null);
-    const p = gsap.utils.selector(headerElement);
+    const animationTextsElement = useRef<HTMLDivElement>(null);
+    const p = gsap.utils.selector(animationTextsElement);
     const timeLine = useRef<any | null>(null);
 
+    const introElement = useRef<HTMLDivElement>(null);
+    const q = gsap.utils.selector(introElement);
+
     useEffect(() => {
-        timeLine.current = gsap.timeline()
-                .to(
-                    p(".text1"), {
-                        text: {value: "Hi there!<br />"},
-                        duration: 0.75,
-                        ease: 'none',
-                        delay: 1
-                    }
-                )
+        if (mql.matches) {
+            timeLine.current = gsap.timeline()
+                    .to(
+                        p(".text1"), {
+                            text: {value: "Hi there!<br />"},
+                            duration: 0.75,
+                            ease: 'none',
+                            delay: 1
+                        }
+                    )
 
-                .to(
-                    p(".text2"), {
-                        text: {value: "Nice to meet you.<br />"},
-                        duration: 1.5,
-                        ease: 'none',
-                        delay: 0.5
-                    }
-                )
+                    .to(
+                        p(".text2"), {
+                            text: {value: "Nice to meet you.<br />"},
+                            duration: 1.5,
+                            ease: 'none',
+                            delay: 0.5
+                        }
+                    )
 
-                .to(
-                    p(".text3"), {
-                        text: {value: "My name is"},
-                        duration: 0.75,
-                        ease: 'none',
-                        delay: 0.5
-                    }
-                )
+                    .to(
+                        p(".text3"), {
+                            text: {value: "My name is"},
+                            duration: 0.75,
+                            ease: 'none',
+                            delay: 0.5
+                        }
+                    )
 
-                .from(
-                    p(".anagramDiv"), {
-                        opacity: 0,
-                        scale: 0,
-                        ease: 'power1',
-                        duration: 0.5
-                    }
-                )
+                    .from(
+                        q(".anagramDiv"), {
+                            opacity: 0,
+                            scale: 0,
+                            ease: 'power1',
+                            duration: 0.5
+                        }
+                    )
 
-        const cursor = gsap.fromTo(
-            p('.cursor'),
-            {autoAlpha: 0},
-            {autoAlpha: 1, duration: 0.5, repeat: -1}
-        )
+            const cursor = gsap.fromTo(
+                p('.cursor'),
+                {autoAlpha: 0},
+                {autoAlpha: 1, duration: 0.5, repeat: -1}
+            )
 
-        gsap.to(
-            p(".cursor"), {
-                text: {value: ""},
-                delay: 9
-            }
-        )
+            // gsap.to(
+            //     p(".cursor"), {
+            //         text: {value: ""},
+            //         delay: 9
+            //     }
+            // )
+        }
 
-        ScrollTrigger.create({
-            start: 'top',
-            onEnter: rearrange,
-            toggleActions: 'complete none none none',
-            once: true,
-        })
+        setTimeout(() => {rearrange()}, 6500)
+
+        setTimeout(() => {
+            // gsap.to(
+            //     p(".cursor"), {
+            //         text: {value: ""},
+            //         repeat: 0,
+            //         autoAlpha: 0
+            //     }
+            // )
+            removeCursor();
+            removeTexts();
+            // Flip.fit(".anagramDiv", ".texts", {
+            //     duration: 1,
+            // })
+
+
+
+        }, 9000)
+        
 
     }, [])
 
+    // Remove Cursor
+    const removeCursor = () => {
+        const cursor = document.getElementsByClassName('cursor');
+        if (cursor[0].parentNode) {
+            cursor[0].parentNode.removeChild(cursor[0]);
+        }
+    }
+
+    // Remove Texts
+    const removeTexts = () => {
+        let text;
+        for (let i=1; i<4; i++) {
+            text = document.querySelector(`.text${i}`);
+            if (text) text.remove();
+        }
+
+    }
+
     // anagram
-    const anagramElement = useRef<HTMLDivElement>(null);
-    const q = gsap.utils.selector(anagramElement);
+    // const anagramElement = useRef<HTMLDivElement>(null);
+    // const q = gsap.utils.selector(anagramElement);
     const initialLayout: {state: undefined | any, items: Item[]} = {
         state: undefined,
         items: createItemList(name)
@@ -128,19 +167,31 @@ const Intro = () => {
         });
     }
 
+    const animationTexts = 
+        <div className='texts' ref={animationTextsElement}>
+            <span className='text1'></span>
+            <span className='text2'></span>
+            <span className='text3'></span>
+            <span className='cursor'>|</span>
+        </div>;
+
+    const texts = 
+        <div className='texts'>
+            <span className='text1'>Hi there!</span>
+            <br/>
+            <span className='text2'>Nice to meet you.</span>
+            <br/>
+            <span className='text3'>My name is</span>
+        </div>;
+
 
     return (
         <section className='Intro'>
-            <div ref={headerElement}>
+            <div ref={introElement}>
                 <div className='container'>
-                    <div className='texts'>
-                        <span className='text1'></span>
-                        <span className='text2'></span>
-                        <span className='text3'></span>
-                        <span className='cursor'>|</span>
-                    </div>
+                    {mql.matches ? animationTexts : texts}
                 </div>
-                <div ref={anagramElement} onClick={rearrange} className='anagramDiv'>
+                <div onClick={rearrange} className='anagramDiv'>
                     { layout.items.map(item => (
                         <div id={`letter-${item.id}`} key={item.id} 
                         className={`char ${item.letter == ' ' ? 'space' : ''}`}>

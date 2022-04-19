@@ -27,4 +27,8 @@
 .skills .container .icons > * {
   margin: 1rem;
 }
+
+.skills .container .icons ~ div .tooltip-text {
+  visibility: hidden;
+}
 /*# sourceMappingURL=Skills.css.map */
