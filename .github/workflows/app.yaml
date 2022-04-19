@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build page
-        run: npm build
+        run: npm run build
         env:
           CI: false
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
