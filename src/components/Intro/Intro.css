@@ -84,9 +84,15 @@
   }
 }
 
+.Intro .container .postAnimationName {
+  position: absolute;
+  font-size: 5rem;
+}
+
 .Intro .anagramDiv > div {
   font-size: 5rem;
   font-weight: bold;
+  position: relative;
 }
 
 @media only screen and (max-width: 993px) {

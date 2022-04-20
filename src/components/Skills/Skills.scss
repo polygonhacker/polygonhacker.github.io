@@ -2,6 +2,9 @@
     background-color: rgb(199, 199, 199);
     padding-bottom: 6rem;
 
+    position: relative;
+    z-index: 10;
+
     .container {
         max-width: 1280px;
         margin-left: auto;

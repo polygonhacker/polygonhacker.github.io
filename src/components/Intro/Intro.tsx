@@ -76,8 +76,16 @@ const Intro = () => {
                             duration: 0.5
                         }
                     )
+                    .from(
+                        q(".postAnimationName"), {
+                            opacity: 0,
+                            y: -300,
+                            duration: 3,
+                            delay: 5
+                        }
+                    )
 
-            const cursor = gsap.fromTo(
+            gsap.fromTo(
                 p('.cursor'),
                 {autoAlpha: 0},
                 {autoAlpha: 1, duration: 0.5, repeat: -1}
@@ -114,15 +122,24 @@ const Intro = () => {
                 t1.to(anagram.getElementsByTagName('div'), {
                     duration: 3,
                     opacity: 0,
-                    x: gsap.utils.random(-1200, 1200, true),
-                    y: gsap.utils.random(-1200, 1200, true),
-                    z: gsap.utils.random(-1200, 1200, true),
+                    y: gsap.utils.random(-1000, 1000, true),
                 })
             }
             removeTexts();
 
 
         }, 10000)
+        
+        // setTimeout(() => {
+        //     gsap.from(
+        //         q(".postAnimationName"), {
+        //             opacity: 0,
+        //             y: gsap.utils.random(-1000, 1000, true),
+        //             duration: 3
+        //         }
+        //     )
+
+        // }, 13000)
         
 
     }, [])
@@ -202,9 +219,10 @@ const Intro = () => {
         <section className='Intro'>
             <div ref={introElement}>
                 <div className='container'>
+                    <span className='postAnimationName'>POLYGON<br/>HACKER</span>
                     {mql.matches ? animationTexts : texts}
                 </div>
-                <div onClick={rearrange} className='anagramDiv'>
+                <div className='anagramDiv'>
                     { layout.items.map(item => (
                         <div id={`letter-${item.id}`} key={item.id} 
                         className={`char ${item.letter == ' ' ? 'space' : ''}`}>

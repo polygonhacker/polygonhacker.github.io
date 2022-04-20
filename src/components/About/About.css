@@ -1,5 +1,7 @@
 .About {
+  position: relative;
   background-color: #c7c7c7;
+  z-index: 10;
 }
 
 .About h2 {

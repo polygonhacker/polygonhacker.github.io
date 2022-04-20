@@ -1,6 +1,8 @@
 .About {
     // max-width: 1980px;
+    position: relative;
     background-color: rgb(199, 199, 199);
+    z-index: 10;
 
     h2 {
         padding: 4rem;
