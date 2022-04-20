@@ -87,6 +87,16 @@
 .Intro .container .postAnimationName {
   position: absolute;
   font-size: 5rem;
+  font-weight: bold;
+}
+
+.Intro .container .postAnimationDetails {
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transform: translateY(16rem);
+          transform: translateY(16rem);
 }
 
 .Intro .anagramDiv > div {

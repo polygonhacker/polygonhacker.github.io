@@ -72,6 +72,14 @@
         .postAnimationName {
             position: absolute;
             font-size: 5rem;
+            font-weight: bold;
+        }
+        .postAnimationDetails {
+            position: absolute;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+            transform: translateY(16rem);
         }
     }
 

@@ -84,6 +84,13 @@ const Intro = () => {
                             delay: 5
                         }
                     )
+                    .from(
+                        q(".postAnimationDetails"), {
+                            opacity: 0,
+                            y: 300,
+                            duration: 0.75,
+                        }
+                    )
 
             gsap.fromTo(
                 p('.cursor'),
@@ -219,7 +226,13 @@ const Intro = () => {
         <section className='Intro'>
             <div ref={introElement}>
                 <div className='container'>
-                    <span className='postAnimationName'>POLYGON<br/>HACKER</span>
+                    <span className='postAnimationName'>PolygonHacker</span>
+                    <span className='postAnimationDetails'>
+                        Software Developer<br/>
+                        Creator of Doubdle<br/>
+                        Vancouver, BC<br/>
+                        University of Toronto '21
+                    </span>
                     {mql.matches ? animationTexts : texts}
                 </div>
                 <div className='anagramDiv'>
