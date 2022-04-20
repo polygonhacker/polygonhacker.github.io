@@ -84,11 +84,15 @@ const Intro = () => {
                             delay: 5
                         }
                     )
-                    .from(
+                    .fromTo(
                         q(".postAnimationDetails"), {
                             opacity: 0,
-                            y: 300,
+                            y: 400,
                             duration: 0.75,
+                        },
+                        {
+                            opacity: 1,
+                            y: 300
                         }
                     )
 
