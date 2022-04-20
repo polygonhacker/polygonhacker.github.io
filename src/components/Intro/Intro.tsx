@@ -15,7 +15,7 @@ const newPositions = [11, 1, 9, 0, 3, 8, 2, 4, 10, 6, 12, 5, 14, 7, 13];
 const originalPosition = [3, 1, 6, 4, 7, 11, 9, 13, 5, 2, 8, 0, 10, 14, 12];
 let anagramOn = false;
 
-const mql = window.matchMedia('(min-width: 1000px');
+const mql = window.matchMedia('min-width: 1000px');
 
 // type Item = {id: number, letter: string};
 
@@ -39,7 +39,9 @@ const Intro = () => {
     const q = gsap.utils.selector(introElement);
 
     useEffect(() => {
-        if (mql.matches) {
+        console.log(window.innerWidth);
+        console.log(window.screen.width);
+        if (window.innerWidth > 1000) {
             timeLine.current = gsap.timeline()
                     .to(
                         p(".text1"), {
@@ -88,7 +90,7 @@ const Intro = () => {
                         q(".postAnimationDetails"), {
                             opacity: 0,
                             y: 400,
-                            duration: 0.75,
+                            duration: 2,
                         },
                         {
                             opacity: 1,
@@ -216,37 +218,47 @@ const Intro = () => {
             <span className='cursor'>|</span>
         </div>;
 
-    const texts = 
-        <div className='texts'>
-            <span className='text1'>Hi there!</span>
-            <br/>
-            <span className='text2'>Nice to meet you.</span>
-            <br/>
-            <span className='text3'>My name is</span>
+    const smallScreenTexts = 
+        <div className='smallScreenTexts'>
+            <span className='name'>PolygonHacker<br/></span>
+            <span className='details'>
+                Software Developer<br/>
+                Creator of Doubdle<br/>
+                Vancouver, BC<br/>
+                University of Toronto '21
+            </span>
         </div>;
 
+    const postAnimationName = <span className='postAnimationName'>PolygonHacker</span>
+
+    const postAnimationDetails = 
+        <span className='postAnimationDetails'>
+            Software Developer<br/>
+            Creator of Doubdle<br/>
+            Vancouver, BC<br/>
+            University of Toronto '21
+        </span>
 
     return (
         <section className='Intro'>
             <div ref={introElement}>
                 <div className='container'>
-                    <span className='postAnimationName'>PolygonHacker</span>
-                    <span className='postAnimationDetails'>
-                        Software Developer<br/>
-                        Creator of Doubdle<br/>
-                        Vancouver, BC<br/>
-                        University of Toronto '21
-                    </span>
-                    {mql.matches ? animationTexts : texts}
+                    {window.innerWidth > 1000 && postAnimationName}
+                    {window.innerWidth > 1000 && postAnimationDetails}
+                    {window.innerWidth > 1000 && animationTexts}
+                    {window.innerWidth <= 1000 && smallScreenTexts}
                 </div>
-                <div className='anagramDiv'>
-                    { layout.items.map(item => (
-                        <div id={`letter-${item.id}`} key={item.id} 
-                        className={`char ${item.letter == ' ' ? 'space' : ''}`}>
-                            {item.letter}
-                        </div>
-                    ))}
-                </div>
+                {
+                    window.innerWidth > 1000 &&
+                    <div className='anagramDiv'>
+                        { layout.items.map(item => (
+                            <div id={`letter-${item.id}`} key={item.id} 
+                            className={`char ${item.letter == ' ' ? 'space' : ''}`}>
+                                {item.letter}
+                            </div>
+                        ))}
+                    </div>
+                }
             </div>
         </section>
     )

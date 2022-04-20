@@ -69,6 +69,20 @@
             }   
         }
 
+        .smallScreenTexts {
+            text-align: center;
+            font-weight: bold;
+            .name {
+                display: block;
+                font-size: 12vw;
+            }
+            .details {
+                display: block;
+                font-size: 6vw;
+                margin-top: 16vw;
+            }
+        }
+
         .postAnimationName {
             position: absolute;
             font-size: 5rem;

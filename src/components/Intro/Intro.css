@@ -84,6 +84,22 @@
   }
 }
 
+.Intro .container .smallScreenTexts {
+  text-align: center;
+  font-weight: bold;
+}
+
+.Intro .container .smallScreenTexts .name {
+  display: block;
+  font-size: 12vw;
+}
+
+.Intro .container .smallScreenTexts .details {
+  display: block;
+  font-size: 6vw;
+  margin-top: 16vw;
+}
+
 .Intro .container .postAnimationName {
   position: absolute;
   font-size: 5rem;
