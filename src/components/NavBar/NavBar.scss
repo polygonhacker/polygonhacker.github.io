@@ -8,7 +8,8 @@
 
 .NavBar {
     // max-width: 1980px;
-    background: rgb(113, 113, 113);
+    // background: rgb(113, 113, 113);
+    background: grey;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -16,14 +17,8 @@
     position: fixed;
     width: 100%;
     top: 0%;
-
     z-index: 1000;
-
-    // header div {
-    //     margin: 0 4rem;
-    //     display: flex;
-    //     align-items: center;
-    // }
+    // height: 10vh;
 
     .name {
         margin-left: 4rem;
@@ -70,7 +65,7 @@
     
     button {
         display: inline-flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0.5rem 1rem;
@@ -78,11 +73,15 @@
         border-radius: 2rem;
         background-color: white;
         border-color: black;
+        color: black;
         &:hover {
             background-color: rgb(222, 222, 222);
             border-color: black;
             cursor: pointer;
             font-weight: 800;
+        }
+        span {
+            top: -10px;
         }
     }
     
@@ -96,6 +95,39 @@
         font-weight: 800;
     }
 
+    .burger {
+        display: none;
+    }
+
+    @media screen and (max-width:1000px) {
+        height: 6rem;
+
+        .menu-list {
+            position: absolute;
+            right: 0%;
+            margin: 0;
+            height: calc(100vh - 4rem);
+            top: 6rem;
+            background-color: grey;
+            width: 50%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }    
+        .burger {
+            display: inline;
+            margin-right: 4rem;
+            cursor: pointer;
+        }    
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
 }
 
 
