@@ -21,6 +21,19 @@
     // height: 10vh;
 
     .name {
+        display: flex;
+        p {
+            text-align: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
         margin-left: 4rem;
     }
 
@@ -127,6 +140,15 @@
     }
     .nav-active {
         transform: translateX(0%);
+    }
+
+    @media screen and (max-width: 600px) {
+        .name {
+            margin-left: 2rem;
+        }
+        .burger {
+            margin-right: 2rem;
+        }
     }
 }
 

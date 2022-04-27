@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './NavBar.css';
 import { ReactComponent as Burger } from '../../assets/menu.svg';
 import { ReactComponent as Download } from '../../assets/download.svg';
+import logo from '../../assets/face.png';
 
 
 
@@ -10,7 +11,7 @@ export const NavBar: React.FC = () => {
 
     return (
         <header className='NavBar'> 
-            <div className='name'>Yong Cheol Park</div>
+            <div className='name'><p>PolygonHacker</p><img src={logo} alt="PolygonHacker" /></div>
             <div className={'menu-list ' + (burgerOn && 'nav-active')}>
                 <ul>
                     <li>
