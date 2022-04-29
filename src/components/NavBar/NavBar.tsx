@@ -52,7 +52,7 @@ export const NavBar: React.FC = () => {
                     <li className='download-button'>
                         <button>
                             <Download style={{ height: '1.2rem', width: '1.2rem' }} />
-                            <span>&nbsp;Resume</span>
+                            <a href='/photo.jpg' download>&nbsp;Resume</a>
                         </button>
                     </li>
                 </ul>
