@@ -36,17 +36,17 @@ export const NavBar: React.FC = () => {
                     </li>
                     <li>
                         <HashLink to='#projects' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
-                            <div data-text='projects'>Projects</div>
+                            <div data-text='Projects'>Projects</div>
                         </HashLink>
                     </li>
                     <li>
                         <HashLink to='#skills' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
-                            <div data-text='projects'>Skills</div>
+                            <div data-text='Skills'>Skills</div>
                         </HashLink>
                     </li>
                     <li>
                         <HashLink to='#contact' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
-                            <div data-text='projects'>Contact</div>
+                            <div data-text='Contact'>Contact</div>
                         </HashLink>
                     </li>
                     <li className='download-button'>
