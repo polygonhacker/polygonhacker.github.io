@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import './NavBar.css';
 import { ReactComponent as Burger } from '../../assets/menu.svg';
 import { ReactComponent as Download } from '../../assets/download.svg';
@@ -16,9 +16,15 @@ export const NavBar: React.FC = () => {
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     }
 
+    function refreshPage() {
+        setTimeout(()=>{
+            window.location.reload();
+        });
+    }
+
     return (
         <header className='NavBar'> 
-            <HashLink to='/' style={{ textDecoration: 'none', color: 'black'}} onClick={() => {window.scrollTo(0, 0)}}>
+            <HashLink to='/' style={{ textDecoration: 'none', color: 'black'}} onClick={() => {window.scrollTo(0, 0); refreshPage();}}>
                 <div className='name'><p>PolygonHacker</p><img src={logo} alt="PolygonHacker" /></div>
             </HashLink>
             <div className={'menu-list ' + (burgerOn && 'nav-active')}>
@@ -44,9 +50,10 @@ export const NavBar: React.FC = () => {
                         </HashLink>
                     </li>
                     <li className='download-button'>
-                        <button data-text=''>
+                        <button>
                             <Download style={{ height: '1.2rem', width: '1.2rem' }} />
-                            <span>&nbsp;Resume</span></button>
+                            <span>&nbsp;Resume</span>
+                        </button>
                     </li>
                 </ul>
             </div>   
