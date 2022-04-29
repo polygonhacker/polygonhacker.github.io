@@ -4,7 +4,7 @@ import { SiJavascript, SiDjango, SiHtml5, SiCss3, SiReact, SiPython, SiSass } fr
 
 const Skills: React.FC = () => {
     return (
-        <section className='skills'>
+        <section className='skills' id='skills'>
             <div className='container'>
                 <h2>Skills</h2>
                 <div className='icons'>

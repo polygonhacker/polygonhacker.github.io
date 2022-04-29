@@ -3,28 +3,45 @@ import './NavBar.css';
 import { ReactComponent as Burger } from '../../assets/menu.svg';
 import { ReactComponent as Download } from '../../assets/download.svg';
 import logo from '../../assets/face.png';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 
 
 export const NavBar: React.FC = () => {
     const [burgerOn, setBurgerOn] = useState(false);
 
+    const scrollWithOffset = (el : HTMLElement) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -70; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
     return (
         <header className='NavBar'> 
-            <div className='name'><p>PolygonHacker</p><img src={logo} alt="PolygonHacker" /></div>
+            <HashLink to='/' style={{ textDecoration: 'none', color: 'black'}} onClick={() => {window.scrollTo(0, 0)}}>
+                <div className='name'><p>PolygonHacker</p><img src={logo} alt="PolygonHacker" /></div>
+            </HashLink>
             <div className={'menu-list ' + (burgerOn && 'nav-active')}>
                 <ul>
                     <li>
-                        <a href='#' data-text='About'>About</a>
+                        <HashLink to='#about' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
+                            <div data-text='About'>About</div>
+                        </HashLink>
                     </li>
                     <li>
-                        <a href='#' data-text='Projects'>Projects</a>
+                        <HashLink to='#projects' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
+                            <div data-text='projects'>Projects</div>
+                        </HashLink>
                     </li>
                     <li>
-                        <a href='#' data-text='Skills'>Skills</a>
+                        <HashLink to='#skills' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
+                            <div data-text='projects'>Skills</div>
+                        </HashLink>
                     </li>
                     <li>
-                        <a href='#' data-text='Contact'>Contact</a>
+                        <HashLink to='#contact' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
+                            <div data-text='projects'>Contact</div>
+                        </HashLink>
                     </li>
                     <li className='download-button'>
                         <button data-text=''>
