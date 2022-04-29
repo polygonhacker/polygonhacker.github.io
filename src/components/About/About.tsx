@@ -2,7 +2,7 @@ import './About.css'
 
 const About: React.FC = () => {
     return (
-        <section className='About'>
+        <section className='About' id='about'>
             <div className='container'>
                 <h2>About</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fringilla neque, sit amet dapibus tortor dictum et. Integer at vestibulum ex, a rhoncus dui. Sed eleifend quam neque. Suspendisse potenti. Nullam eu ex et nulla mattis feugiat. Cras et ex ut sapien tempor interdum. Phasellus scelerisque, odio vel cursus euismod, dolor lectus ultrices risus, eu ultricies orci felis eu lectus. Donec a aliquam tortor. Fusce placerat et nisi venenatis pharetra. Sed porta erat a nisl efficitur consectetur. Etiam commodo nibh quis pretium malesuada. Donec tincidunt pulvinar molestie. Vivamus at nisl sed lectus tincidunt mollis sit amet vitae mi. Integer sit amet iaculis leo. Phasellus mattis tellus quis pellentesque finibus.
