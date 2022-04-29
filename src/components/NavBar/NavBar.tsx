@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     }
 
-    function refreshPage() {
+    const refreshPage = () => {
         setTimeout(()=>{
             window.location.reload();
         });
