@@ -1,70 +1,92 @@
 // .footer {
-//     // justify-content: center;
-//     // margin-left: auto;
-//     // margin-right: auto;
 //     display: flex;
-//     margin-left: auto;
-//     margin-right: auto;
-//     justify-content: space-around;
+//     gap: 1rem;
+
+//     min-height: 12rem;
+//     background-color: rgb(113, 113, 113);
+
 //     width: 100%;
-//     background-color: rgb(99, 99, 99);
-//     min-height: 100px;
-//     align-items: center;
 
-//     .social-media {
+//     > div {
+//         margin: 2rem 0 2rem 0;
+//     }
 
+//     h2 {
+//         font-size: 1.5rem;
+//     }
+
+//     .left {
+//         // margin: 2rem 0 0 4rem;
+//         position: relative;
+//         h3 {
+//             margin: 1rem 0 0 0;
+//         }
+
+//         .copyright {
+//             position: absolute;
+//             bottom: 3rem;
+//         }
+//     }
+
+//     .right {
+//         // margin: 2rem 0 0 4rem;
+//         position: relative;
+//         .social-media {
+//             // margin: 1rem 0 0 0;
+//             // height: 100px;
+//             position:absolute;
+//             bottom: 3rem;
+            
+//             a {
+//                 padding: 0 1rem 0 0;
+//                 text-decoration: none;
+//                 color: black;
+//                 width: 5rem;
+//                 height: 5rem;
+//             }
+//         }
 //     }
 
 // }
 
 .footer {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-
     min-height: 12rem;
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(113, 113, 113);
+    margin-left: auto;
+    margin-right: auto;
 
-    width: 100%;
-
-    > div {
-        margin: 2rem 0 0 4rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .left {
-        // margin: 2rem 0 0 4rem;
-        position: relative;
-        h3 {
-            margin: 1rem 0 0 0;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        > div {
+            padding: 2rem 0 2rem 2rem;
+            h2 {
+                font-size: 1.5rem;
+            }
         }
-
-        .copyright {
-            position: absolute;
-            bottom: 3rem;
+        .left {
+            width: calc(max(50%, 360px));
+            .social-media {
+                margin-top: 3rem;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    padding: 0 12px 0 0;
+                }
+            }
         }
-    }
-
-    .right {
-        // margin: 2rem 0 0 4rem;
-        position: relative;
-        .social-media {
-            // margin: 1rem 0 0 0;
-            // height: 100px;
-            position:absolute;
-            bottom: 3rem;
-            
-            a {
-                padding: 0 1rem 0 0;
-                text-decoration: none;
-                color: black;
-                width: 5rem;
-                height: 5rem;
+        .right {
+            width: calc(max(50%, 360px));
+            h3 {
+                padding-top: 0.5rem;
+            }
+            .copyright {
+                padding-top: 2.5rem;
             }
         }
     }
-
 }
