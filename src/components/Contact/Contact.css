@@ -94,7 +94,7 @@
       grid-template-columns: auto auto;
   -ms-grid-rows: (5)[50px];
       grid-template-rows: repeat(50px, 5);
-  gap: 0rem 1rem;
+  gap: 1rem;
 }
 
 .Contact .container .contactInfo div {
@@ -110,6 +110,7 @@
 .Contact .container .contactInfo div a {
   border-bottom: 1px dotted #000;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .Contact .container .contactInfo div:nth-child(odd) {

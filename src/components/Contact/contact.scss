@@ -65,7 +65,7 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: repeat(50px, 5);
-            gap: 0rem 1rem;
+            gap: 1rem;
 
             div {
                 display: flex;
@@ -75,6 +75,7 @@
                 a{
                     border-bottom: 1px dotted #000;
                     cursor: pointer;
+                    font-size: 1.2rem;
                 }
                 &:nth-child(odd) {
                     justify-content: center;
