@@ -1,5 +1,6 @@
 import './Footer.css';
-import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
+import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { FaAngellist } from "react-icons/fa";
 
 const Footer: React.FC = () => {
     return (
@@ -9,14 +10,15 @@ const Footer: React.FC = () => {
                     <h2>Follow me</h2>
                     <div className='social-media'>
                         <a href='https://github.com/polygonhacker'><BsGithub size={40} /></a>
-                        <a href='https://www.instagram.com/polygonhacker/'><BsInstagram size={40} /></a>
                         <a href='#'><BsLinkedin size={40} /></a>
+                        <a href='#'><FaAngellist size={40} /></a>
+                        <a href='https://www.instagram.com/polygonhacker/'><BsInstagram size={40} /></a>
                     </div>
                 </div>
                 <div className='right'>
                     <div>
                         <h2>Yong Cheol Park</h2>
-                        <h3>polygonhacker [at] gmail [dot] com</h3>
+                        <a>polygonhacker@gmail.com</a>
                     </div>
                     <div className='copyright'>
                         <h4>© Copyright 2022. Yong Cheol Park</h4>

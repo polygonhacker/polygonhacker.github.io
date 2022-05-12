@@ -81,8 +81,13 @@
         }
         .right {
             width: calc(max(50%, 360px));
-            h3 {
-                padding-top: 0.5rem;
+            h2 {
+                padding-bottom: 0.5rem;
+            }
+            a {
+                // margin-top: 4rem;
+                border-bottom: 1px dotted #000;
+                cursor: pointer;
             }
             .copyright {
                 padding-top: 2.5rem;

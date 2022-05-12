@@ -44,8 +44,13 @@
   width: calc(max(50%, 360px));
 }
 
-.footer .container .right h3 {
-  padding-top: 0.5rem;
+.footer .container .right h2 {
+  padding-bottom: 0.5rem;
+}
+
+.footer .container .right a {
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
 }
 
 .footer .container .right .copyright {
