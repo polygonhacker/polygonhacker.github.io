@@ -1,0 +1,26 @@
+.Doubdle {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: white;
+    z-index: 10;
+
+    h2{
+        font-size: 2rem;
+        padding: 4rem;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+
+        .card {
+            border-radius: 0.5rem;
+            padding: 2rem;
+            background-color: rgb(199, 199, 199);
+            margin-bottom: 4rem;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Intro from './components/Intro/Intro';
 import About from './components/About/About';
+import Doubdle from './components/Doubdle/Doubdle';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
@@ -15,7 +16,7 @@ const App: React.FC = () => {
       <div className="App">
         <Intro />
         <About />
-        <Projects />
+        <Doubdle />
         <Skills />
         <Contact />
         <NavBar />
