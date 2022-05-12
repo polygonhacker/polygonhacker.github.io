@@ -1,6 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { MdOutlineMailOutline } from "react-icons/md";
+import { GoMarkGithub } from "react-icons/go";
+import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { FaAngellist } from "react-icons/fa";
+import './Contact.css';
 
 const Contact = () => {
     const form = useRef(null);
@@ -11,8 +15,10 @@ const Contact = () => {
       emailjs.sendForm('service_sfo2wsg', 'template_38dyfmt', e.currentTarget, 'tO1aZvwzpGy6JZpQn')
         .then((result) => {
             console.log(result.text);
+            alert('Email sent! Thank you.');
         }, (error) => {
             console.log(error.text);
+            alert('Error: email did not send.');
         });
         e.currentTarget.reset();
     };
@@ -20,18 +26,64 @@ const Contact = () => {
     const emailForm = 
         (
             <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label>
-                <input type="text" name="from_name" />
-                <label>Email</label>
-                <input type="email" name="from_email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+                <div className='name'>
+                    <input type="text" name="from_name" placeholder='Your name...' />
+                </div>
+                <div className='email'>
+                    <input type="email" name="from_email" placeholder='Your email...' />
+                </div>
+                <div className='subject'>
+                    <input type="subject" name="subject" placeholder='Subject...' />
+                </div>
+                <div className='message'>
+                    <textarea name="message" placeholder='Message...' />
+                </div>
+                <input className='submitButton' type="submit" value="Send" />
             </form>
         )
   
     return (
-      emailForm
+        <section className='Contact' id='contact'>
+            <h2>Contact</h2>
+            <div className='container'>
+                <div className='contactInfo'>
+                    <div>
+                        <MdOutlineMailOutline size={60} />
+                    </div>
+                    <div>
+                        <a>polygonhacker@gmail.com</a>
+                    </div>
+                    <div>
+                        <BsGithub size={50} />
+                    </div>
+                    <div>
+                        <a>github.com/polygonhacker</a>
+                    </div>
+                    <div>
+                        <BsLinkedin size={50} />
+                    </div>
+                    <div>
+                        <a>linkedin.com</a>
+                    </div>
+                    <div>
+                        <FaAngellist style={{}} size={56} />
+                    </div>
+                    <div>
+                        <a>angel.co</a>
+                    </div>
+                    <div>
+                        <BsInstagram style={{}} size={50} />
+                    </div>
+                    <div>
+                        <a>instagram.com/polygonhacker</a>
+                    </div>
+                </div>
+                <div className='emailCard'>
+                    <h3>Send Me an Email</h3>
+                    { emailForm }
+                </div>
+            </div>
+        </section>
     );
   };
 
