@@ -49,6 +49,8 @@
 }
 
 .footer .container .right a {
+  text-decoration: none;
+  color: black;
   border-bottom: 1px dotted #000;
   cursor: pointer;
 }
