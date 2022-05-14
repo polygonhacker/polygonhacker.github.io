@@ -1,17 +1,30 @@
-import './About.css'
+import React from 'react';
+import './About.css';
+import { HashLink } from 'react-router-hash-link';
 
 const About: React.FC = () => {
+
+    const scrollWithOffset = (el : HTMLElement) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -70; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
     return (
         <section className='About' id='about'>
             <div className='container'>
                 <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fringilla neque, sit amet dapibus tortor dictum et. Integer at vestibulum ex, a rhoncus dui. Sed eleifend quam neque. Suspendisse potenti. Nullam eu ex et nulla mattis feugiat. Cras et ex ut sapien tempor interdum. Phasellus scelerisque, odio vel cursus euismod, dolor lectus ultrices risus, eu ultricies orci felis eu lectus. Donec a aliquam tortor. Fusce placerat et nisi venenatis pharetra. Sed porta erat a nisl efficitur consectetur. Etiam commodo nibh quis pretium malesuada. Donec tincidunt pulvinar molestie. Vivamus at nisl sed lectus tincidunt mollis sit amet vitae mi. Integer sit amet iaculis leo. Phasellus mattis tellus quis pellentesque finibus.
-
-Nam enim lectus, luctus ut imperdiet in, elementum dapibus nulla. Nulla mollis at velit vel viverra. Aenean congue consequat enim, a dapibus ante fringilla sit amet. Etiam hendrerit vestibulum condimentum. Etiam in venenatis dui. Suspendisse eu scelerisque metus, et aliquam quam. Ut quis libero augue. Ut erat augue, aliquam sed lacus sed, euismod porttitor ex.
-
-Nullam dignissim sodales dictum. Nulla id tellus sit amet massa bibendum suscipit. Maecenas lorem lorem, interdum in cursus ac, ultrices vitae orci. Aenean eu tellus vitae lectus lacinia cursus semper vitae turpis. Quisque fringilla, tortor id finibus rhoncus, nisi lectus dictum sapien, vel maximus odio nunc vel metus. In hac habitasse platea dictumst. Aliquam at leo non eros volutpat viverra eget pellentesque enim. Vestibulum et maximus risus. Aenean scelerisque fringilla nunc sed pulvinar. Praesent orci urna, placerat eu laoreet vel, bibendum sit amet sem.
-
-</p>
+                <p>
+                    I am <span>Yong Cheol Park</span>, also known as <span>Polygon Hacker</span>. But most people call me <span>Mark</span>.
+                    <br/><br/>
+                    Graduated with an Honours Bachelor of Science degree in <span>computer science</span> and <span>philosophy</span> from the <span>University of Toronto</span>, St. George Campus, I am passionate about building software that enrich our lives. 
+                    <br/><br/>
+                    My main interests are <span>web development</span> and <span>system design</span> for making scalable applications.
+                    <br/><br/>
+                    Other than being a tech enthusiast, I also love jazz, Muay Thai boxing and diving in the ocean.
+                    <br/><br/>
+                    Feel free to <HashLink to='#contact' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}><a><span>contact</span></a></HashLink> me anytime!
+                </p>
             </div>
         </section>
     )
