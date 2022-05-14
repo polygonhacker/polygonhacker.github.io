@@ -1,5 +1,5 @@
 import React from 'react';
-import './Doubdle.css';
+import './doubdle.css';
 
 const Doubdle = () => {
   return (
