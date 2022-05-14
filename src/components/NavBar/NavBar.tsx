@@ -3,7 +3,7 @@ import './NavBar.css';
 import { ReactComponent as Burger } from '../../assets/menu.svg';
 import { ReactComponent as Download } from '../../assets/download.svg';
 import logo from '../../assets/face.png';
-import { HashLink, NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -35,8 +35,8 @@ export const NavBar: React.FC = () => {
                         </HashLink>
                     </li>
                     <li>
-                        <HashLink to='#projects' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
-                            <div data-text='Projects'>Projects</div>
+                        <HashLink to='#doubdle' scroll={el => scrollWithOffset(el)} style={{ textDecoration: 'none' }}>
+                            <div data-text='Doubdle'>Doubdle</div>
                         </HashLink>
                     </li>
                     <li>
@@ -52,7 +52,7 @@ export const NavBar: React.FC = () => {
                     <li className='download-button'>
                         <button>
                             <Download style={{ height: '1.2rem', width: '1.2rem' }} />
-                            <a href='#' download>&nbsp;Resume</a>
+                            <a href='/YongCheolPark_CV.pdf' download>&nbsp;Resume</a>
                         </button>
                     </li>
                 </ul>

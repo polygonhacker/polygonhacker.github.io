@@ -1,6 +1,7 @@
 import './Skills.css';
-import { DiDjango, DiHtml5, DiCss3, DiReact,  } from "react-icons/di";
-import { SiJavascript, SiDjango, SiHtml5, SiCss3, SiReact, SiPython, SiSass } from 'react-icons/si';
+import { GoDatabase } from "react-icons/go";
+import { SiJavascript, SiHtml5, SiCss3, SiPython, SiGithubactions } from 'react-icons/si';
+import { ImGit } from "react-icons/im";
 
 const Skills: React.FC = () => {
     return (
@@ -8,27 +9,30 @@ const Skills: React.FC = () => {
             <div className='container'>
                 <h2>Skills</h2>
                 <div className='icons'>
-                    <div className='react-icon'>
-                        <SiReact size={120} />
-                        <div>React</div>
+                    <div className='icon'>
+                        <div><SiJavascript size={120} /></div>
+                        <div className='icon-name'>JavaScript</div>
+                        <div>TypeScript, React, Node.js, Express.js, GSAP</div>
                     </div>
-                    <div className='js-icon'>
-                        <SiJavascript size={120} />
+                    <div className='icon'>
+                        <div><SiPython size={120} /></div>
+                        <div className='icon-name'>Python</div>
+                        <div>Django</div>
                     </div>
-                    <div className='html-icon'>
-                        <SiHtml5 size={120} />
+                    <div className='icon'>
+                        <div><GoDatabase size={120} /></div>
+                        <div className='icon-name'>Database</div>
+                        <div>MySQL, PostgreSQL, SQLite, MongoDB</div>
                     </div>
-                    <div className='css-icon'>
-                        <SiCss3 size={120} />
+                    <div className='icon'>
+                        <div><SiGithubactions size={120} /></div>
+                        <div className='icon-name'>CI/CD</div>
+                        <div>GitHub Actions, TravisCI</div>
                     </div>
-                    <div className='sass-icon'>
-                        <SiSass size={120} />
-                    </div>
-                    <div className='python-icon'>
-                        <SiPython size={120} />
-                    </div>
-                    <div className='django-icon'>
-                        <SiDjango size={120} />
+                    <div className='icon'>
+                        <div><ImGit size={120} /></div>
+                        <div className='icon-name'>Others</div>
+                        <div>HTML, CSS, Git, Bash, Zsh</div>
                     </div>
                 </div>
             </div>

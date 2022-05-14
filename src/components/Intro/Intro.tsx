@@ -2,7 +2,6 @@ import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
 import { Flip, TextPlugin, ScrollTrigger } from 'gsap/all';
 import './Intro.css'
-import face from './face.png';
 import { Item } from '../../types'
 
 gsap.registerPlugin(Flip);
@@ -14,10 +13,6 @@ const name = 'YONG CHEOL PARK';
 const newPositions = [11, 1, 9, 0, 3, 8, 2, 4, 10, 6, 12, 5, 14, 7, 13];
 const originalPosition = [3, 1, 6, 4, 7, 11, 9, 13, 5, 2, 8, 0, 10, 14, 12];
 let anagramOn = false;
-
-const mql = window.matchMedia('min-width: 1000px');
-
-// type Item = {id: number, letter: string};
 
 const createItemList = (letters: string) => {
     let itemList = []
@@ -39,8 +34,6 @@ const Intro = () => {
     const q = gsap.utils.selector(introElement);
 
     useEffect(() => {
-        console.log(window.innerWidth);
-        console.log(window.screen.width);
         if (window.innerWidth > 1000) {
             timeLine.current = gsap.timeline()
                     .to(
@@ -104,56 +97,25 @@ const Intro = () => {
                 {autoAlpha: 1, duration: 0.5, repeat: -1}
             )
 
-            // gsap.to(
-            //     p(".cursor"), {
-            //         text: {value: ""},
-            //         delay: 9
-            //     }
-            // )
+            setTimeout(() => {rearrange()}, 7000)
+
+            setTimeout(() => {
+                removeCursor();
+
+                const t1 = gsap.timeline();
+                const anagram = document.querySelector('.anagramDiv');
+
+                t1.set('span', {perspective: 400}) ;
+                if (anagram) {
+                    t1.to(anagram.getElementsByTagName('div'), {
+                        duration: 3,
+                        opacity: 0,
+                        y: gsap.utils.random(-1000, 1000, true),
+                    })
+                }
+                removeTexts();
+            }, 10000)
         }
-
-        setTimeout(() => {rearrange()}, 7000)
-
-        setTimeout(() => {
-            // gsap.to(
-            //     p(".cursor"), {
-            //         text: {value: ""},
-            //         repeat: 0,
-            //         autoAlpha: 0
-            //     }
-            // )
-            removeCursor();
-            // Flip.fit(".anagramDiv", ".texts", {
-            //     duration: 1,
-            // })
-
-            const t1 = gsap.timeline();
-            const anagram = document.querySelector('.anagramDiv');
-
-            t1.set('span', {perspective: 400}) ;
-            if (anagram) {
-                t1.to(anagram.getElementsByTagName('div'), {
-                    duration: 3,
-                    opacity: 0,
-                    y: gsap.utils.random(-1000, 1000, true),
-                })
-            }
-            removeTexts();
-
-
-        }, 10000)
-        
-        // setTimeout(() => {
-        //     gsap.from(
-        //         q(".postAnimationName"), {
-        //             opacity: 0,
-        //             y: gsap.utils.random(-1000, 1000, true),
-        //             duration: 3
-        //         }
-        //     )
-
-        // }, 13000)
-        
 
     }, [])
 
@@ -172,12 +134,8 @@ const Intro = () => {
             text = document.querySelector(`.text${i}`);
             if (text) text.remove();
         }
-
     }
 
-    // anagram
-    // const anagramElement = useRef<HTMLDivElement>(null);
-    // const q = gsap.utils.selector(anagramElement);
     const initialLayout: {state: undefined | any, items: Item[]} = {
         state: undefined,
         items: createItemList(name)

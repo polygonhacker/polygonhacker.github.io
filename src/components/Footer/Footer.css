@@ -1,49 +1,61 @@
 .footer {
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
   min-height: 12rem;
-  background-color: #575757;
-  width: 100%;
+  background-color: #717171;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer > div {
-  margin: 2rem 0 0 4rem;
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer h2 {
+.footer .container > div {
+  padding: 2rem 0 2rem 2rem;
+}
+
+.footer .container > div h2 {
   font-size: 1.5rem;
 }
 
-.footer .left {
-  position: relative;
+.footer .container .left {
+  width: calc(max(50%, 360px));
 }
 
-.footer .left h3 {
-  margin: 1rem 0 0 0;
+.footer .container .left .social-media {
+  margin-top: 3rem;
 }
 
-.footer .left .copyright {
-  position: absolute;
-  bottom: 3rem;
-}
-
-.footer .right {
-  position: relative;
-}
-
-.footer .right .social-media {
-  position: absolute;
-  bottom: 3rem;
-}
-
-.footer .right .social-media a {
-  padding: 0 1rem 0 0;
+.footer .container .left .social-media a {
   text-decoration: none;
   color: black;
-  width: 5rem;
-  height: 5rem;
+  padding: 0 12px 0 0;
+}
+
+.footer .container .right {
+  width: calc(max(50%, 360px));
+}
+
+.footer .container .right h2 {
+  padding-bottom: 0.5rem;
+}
+
+.footer .container .right a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
+}
+
+.footer .container .right .copyright {
+  padding-top: 2.5rem;
 }
 /*# sourceMappingURL=Footer.css.map */

@@ -2,10 +2,11 @@
   position: relative;
   background-color: #c7c7c7;
   z-index: 10;
+  padding-bottom: 4rem;
 }
 
 .About h2 {
-  padding: 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   font-size: 2rem;
 }
 
@@ -15,10 +16,31 @@
   margin-right: auto;
 }
 
-.About p {
+.About p, .About a {
   margin-left: auto;
   margin-right: auto;
   max-width: 1000px;
-  padding: 0 0 4rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .About p, .About a {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+}
+
+.About a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
+  padding: 0;
+}
+
+.About span {
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 /*# sourceMappingURL=About.css.map */

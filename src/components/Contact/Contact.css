@@ -1,0 +1,136 @@
+.Contact {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.Contact h2 {
+  font-size: 2rem;
+  padding: 4rem 4rem 3rem 4rem;
+}
+
+.Contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Contact .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Contact .container form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2vw;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.Contact .container form div input {
+  width: 30vw;
+  height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 993px) {
+  .Contact .container form div input {
+    width: 100%;
+  }
+}
+
+.Contact .container form div textarea {
+  width: 30vw;
+  height: 10rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.4rem;
+  resize: none;
+}
+
+@media only screen and (max-width: 993px) {
+  .Contact .container form div textarea {
+    width: 100%;
+  }
+}
+
+.Contact .container form .submitButton {
+  height: 3rem;
+  width: 9rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border-color: grey;
+  cursor: pointer;
+  border-style: solid;
+}
+
+.Contact .container .contactInfo {
+  margin-bottom: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: (5)[50px];
+      grid-template-rows: repeat(50px, 5);
+  gap: 1rem;
+}
+
+.Contact .container .contactInfo div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+.Contact .container .contactInfo div a {
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.Contact .container .contactInfo div:nth-child(odd) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Contact .container .emailCard {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #c7c7c7;
+  margin-bottom: 4rem;
+}
+
+.Contact .container h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+/*# sourceMappingURL=Contact.css.map */
