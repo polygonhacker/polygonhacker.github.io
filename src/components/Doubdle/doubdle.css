@@ -2,30 +2,47 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 6rem;
   position: relative;
   background-color: white;
   z-index: 10;
 }
 
+.Doubdle .description {
+  text-align: center;
+  padding: 1rem;
+}
+
+.Doubdle .description .big {
+  font-size: 2rem;
+}
+
+.Doubdle .description .small {
+  font-size: 1.2rem;
+  margin: 1rem 0 4rem 0;
+}
+
+.Doubdle .description a {
+  padding: 1rem 1.75rem;
+  border-radius: 2rem;
+  border-color: grey;
+  border-style: solid;
+  background-color: #c7c7c7;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 993px) {
+  .Doubdle .description a {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
 .Doubdle h2 {
   font-size: 2rem;
-  padding: 4rem;
-}
-
-.Doubdle .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.Doubdle .card-container .card {
-  border-radius: 0.5rem;
-  padding: 2rem;
-  background-color: #c7c7c7;
-  margin-bottom: 4rem;
-  font-size: 1.2rem;
+  padding: 4rem 4rem 2rem 4rem;
 }
 /*# sourceMappingURL=doubdle.css.map */
