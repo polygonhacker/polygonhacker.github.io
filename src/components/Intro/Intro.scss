@@ -26,9 +26,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 4rem;
-        &:hover {
-            cursor: pointer;
-        }
+        cursor: default;
         @media only screen and (max-width : 993px) {
             margin-top: 1rem;
             margin-bottom: 2rem;

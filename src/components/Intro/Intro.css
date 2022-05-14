@@ -29,10 +29,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 4rem;
-}
-
-.Intro .anagramDiv:hover {
-  cursor: pointer;
+  cursor: default;
 }
 
 @media only screen and (max-width: 993px) {
