@@ -29,6 +29,23 @@
                     visibility: hidden;
                 }
             }
+
+            .icon {
+                width: 200px;
+                > * {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .icon-name {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 0.5rem;
+                }
+                
+
+            }
             
 
 
