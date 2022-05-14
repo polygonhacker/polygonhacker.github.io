@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
                     <h2>Follow me</h2>
                     <div className='social-media'>
                         <a href='https://github.com/polygonhacker' target='_blank' rel='noopener noreferrer'><BsGithub size={40} /></a>
-                        <a href='#'><BsLinkedin size={40} /></a>
-                        <a href='#'><FaAngellist size={40} /></a>
+                        <a href='https://linkedin.com/in/yong-cheol-park' target='_blank' rel='noopener noreferrer'><BsLinkedin size={40} /></a>
+                        <a href='https://angel.co/u/yong-cheol-park' target='_blank' rel='noopener noreferrer'><FaAngellist size={40} /></a>
                         <a href='https://www.instagram.com/polygonhacker/' target='_blank' rel='noopener noreferrer'><BsInstagram size={40} /></a>
                     </div>
                 </div>

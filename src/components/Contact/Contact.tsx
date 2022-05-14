@@ -51,31 +51,31 @@ const Contact = () => {
                         <MdOutlineMailOutline size={60} />
                     </div>
                     <div>
-                        <a>polygonhacker@gmail.com</a>
+                        <a href='mailto:polygonhacker@gmail.com'>polygonhacker@gmail.com</a>
                     </div>
                     <div>
                         <BsGithub size={50} />
                     </div>
                     <div>
-                        <a>github.com/polygonhacker</a>
+                        <a href='https://github.com/polygonhacker' target='_blank' rel='noopener noreferrer'>github.com/polygonhacker</a>
                     </div>
                     <div>
                         <BsLinkedin size={50} />
                     </div>
                     <div>
-                        <a>linkedin.com</a>
+                        <a href='https://linkedin.com/in/yong-cheol-park' target='_blank' rel='noopener noreferrer'>linkedin.com/in/yong-cheol-park</a>
                     </div>
                     <div>
                         <FaAngellist style={{}} size={56} />
                     </div>
                     <div>
-                        <a>angel.co</a>
+                        <a href='https://angel.co/u/yong-cheol-park' target='_blank' rel='noopener noreferrer'>angel.co/u/yong-cheol-park</a>
                     </div>
                     <div>
                         <BsInstagram style={{}} size={50} />
                     </div>
                     <div>
-                        <a>instagram.com/polygonhacker</a>
+                        <a href='https://www.instagram.com/polygonhacker/' target='_blank' rel='noopener noreferrer'>instagram.com/polygonhacker</a>
                     </div>
                 </div>
                 <div className='emailCard'>
